@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  display: inline;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.game-board {
+  visibility: hidden;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  width: 60%;
+}
+
+.kartu {
+  background-color: #ef2ddf;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  perspective: 1000px;
+  border-radius: 10px;
+}
+
+.isi-kartu {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.kartu.flipped .isi-kartu {
+  transform: rotateY(180deg);
+}
+
+.depan,
+.belakang {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.depan {
+  background-color: #ffffff;
+  /* color: #ef2dcf; */
+  transform: rotateY(180deg);
+}
+
+.depan i {
+  font-size: 2rem;
+  color: #ef2ddf;
+}
