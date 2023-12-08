@@ -89,8 +89,9 @@ function kembalikanCard(){
 function reset(){
   [kartuPertama, kartuKedua] = [null, null];
   kunciKartu = false;
+  let name = document.querySelector(`#player-name`);
   if(skor === 8){
-    alert("asd");
+    alert(`!!!Selamat ${name} !!! Anda Menang Dapatkan Hadiah BMW M3 GTR dengan bekerja dengan kami tanpa gaji selama 50 tahun`);
     return;
   }
 }
